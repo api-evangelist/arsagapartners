@@ -1,23 +1,72 @@
 aid: arsagapartners
+
 name: Arsagapartners
-description: 'Arsagapartners is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://www.arsaga.jp/wp/wp-content/uploads/2025/11/og-image.jpg
+
+description: 'Arsagapartners, operating as アルサーガパートナーズ株式会社, is a Japan‑based consulting and technology firm delivering end‑to‑end digital transformation (DX) solutions. It offers consulting, system development, AI services, and a suite of AI‑powered tools such as ARSAGA VIDEO CREATE and Chatty. The company combines a team of 100 consultants and 300 engineers to support clients across various industries, focusing on AI, web marketing, and custom software development.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arsagapartners/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Consulting
+- AI
+- Software Development
+- Japan
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arsagapartners-hosts.yml
+- type: Newsroom
+  url: https://www.arsaga.jp/news/
+- type: DomainSecurity
+  url: security/arsagapartners-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/arsagapartners
+  url: https://www.arsaga.jp
+
+- type: Blog
+  url: https://www.arsaga.jp/blog/
+- type: PrivacyPolicy
+  url: https://www.arsaga.jp/privacy-policy/
+- type: SecurityPolicy
+  url: https://www.arsaga.jp/security-policy/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/arsagapartners
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
